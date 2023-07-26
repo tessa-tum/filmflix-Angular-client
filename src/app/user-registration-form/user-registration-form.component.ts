@@ -28,13 +28,13 @@ export class UserRegistrationFormComponent implements OnInit {
         this.dialogRef.close(); 
         // console.log(response)
         this.snackBar.open(result, 'OK', {
-          duration: 2000,
+          duration: 3000,
         });
       },
       (result) => {
         // console.log(response)
         this.snackBar.open(result, 'OK', {
-          duration: 2000,
+          duration: 3000,
         });
       }
     );
