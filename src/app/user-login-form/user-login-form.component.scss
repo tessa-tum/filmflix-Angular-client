@@ -1,0 +1,44 @@
+.login {
+  background-color: #fffffe;
+  padding: 8px;
+
+  & .login-header {
+    color: #282828;
+
+    & mat-card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  }
+
+  & .login-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    & mat-form-field {
+      @media screen and (max-width: 500px) {
+        width: 48%;
+      }
+    }
+  }
+
+  & .login-input {
+    width: 100%;
+  }
+
+  & button {
+    width: 100px;
+    background-color: #e53170;
+    color: #fffffe;
+    font-weight: 700;
+    margin-left: 8px;
+  }
+}
