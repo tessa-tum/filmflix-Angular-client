@@ -1,0 +1,34 @@
+.top-title,
+.nav-spacer {
+  background: #2e2f3e;
+  color: hsl(170, 20%, 100%);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5px;
+  margin-left: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 18px;
+}
+
+.nav-bar {
+  background: #2e2f3e;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+
+  & button {
+    color: #fffffe;
+    margin-left: 5px;
+  }
+}
+
+.nav-spacer {
+  visibility: hidden;
+}
+
+.logout-button {
+  color: #fffffe !important;
+}
