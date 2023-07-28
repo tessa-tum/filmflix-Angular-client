@@ -1,0 +1,62 @@
+h2 {
+  color: #1a2b50;
+  font-size: 20px;
+}
+
+.movie-view {
+  position: relative;
+  display: grid;
+  gap: 50px;
+  background-color: #1a2b50;
+  padding: 80px;
+}
+
+.movie-card {
+  height: 70vh;
+  width: auto;
+  justify-self: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.movie-card > img {
+  height: 70%;
+}
+
+.mdc-card__actions {
+  display: block;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 250px) {
+  .movie-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .movie-view {
+    grid-template-columns: 1fr 1fr;
+  }
+  .movie-card {
+    width: 45vw;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .movie-view {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .movie-card {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .movie-view {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .movie-card {
+    width: 20vw;
+  }
+}
