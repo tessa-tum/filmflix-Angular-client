@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="bg">
+  <div class="main-page">
+    <div>
+      <img src="/assets/clapperboard.png" alt="image" class="clapperboard" />
+    </div>
+    <mat-card class="welcome-card">
+      <mat-card-header>
+        <mat-card-title class="welcome-card-title"
+          >Welcome to filmflix!</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <p>Your personal movie database</p>
+      </mat-card-content>
+      <mat-card-actions class="welcome-card-actions">
+        <button mat-raised-button (click)="openUserLoginDialog()">Login</button>
+      </mat-card-actions>
+    </mat-card>
+    <h3>No account? You can sign up here:</h3>
+    <button mat-raised-button (click)="openUserRegistrationDialog()">
+      Sign Up
+    </button>
+  </div>
+</html>

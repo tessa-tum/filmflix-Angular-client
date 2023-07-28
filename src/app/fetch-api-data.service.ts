@@ -151,7 +151,7 @@ export class FetchApiDataService {
   }
 
   // ... delete a movie from favorite movies list endpoint
-  deleteFavoriteMovie(MovieID: string): Observable<any> {
+  removeFavoriteMovie(MovieID: string): Observable<any> {
     return this.http
       .delete(apiUrl + 'users/' + user.Username + '/movies/' + MovieID, {
         headers: new HttpHeaders({

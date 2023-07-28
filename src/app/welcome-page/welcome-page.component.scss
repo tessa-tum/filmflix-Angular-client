@@ -1,0 +1,116 @@
+.bg {
+  background-color: #1a2b50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+h2 {
+  color: #2e2f3e;
+  font-size: 20px;
+}
+
+h3 {
+  color: #fffffe;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.main-page {
+  text-align: center;
+
+  & .welcome-card {
+    background-color: #fffffe;
+    color: #2e2f3e;
+    max-width: 400px;
+    min-height: 270px;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 20px 30px rgba(40, 40, 40, 0.12),
+      0 4px 8px rgba(40, 40, 40, 0.06);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+
+    & .welcome-card-title {
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    & .welcome-card-actions {
+      text-align: center;
+    }
+  }
+
+  & button {
+    margin-top: 25px;
+    width: 120px;
+    height: 50px;
+    background-color: #84afdd;
+    color: #fffffe;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.clapperboard {
+  width: 200px;
+  height: auto;
+  margin-top: 80px;
+}
+
+/* general media queries */
+
+@media all and (max-width: 500px) {
+  .main-page {
+    text-align: center;
+
+    & .welcome-card {
+      max-width: 350px;
+      min-height: 210px;
+    }
+
+    & button {
+      width: 100px;
+      height: 42px;
+    }
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .main-page {
+    text-align: center;
+
+    & .welcome-card {
+      max-width: 350px;
+      min-height: 210px;
+    }
+
+    & button {
+      width: 100px;
+      height: 42px;
+    }
+  }
+}
+
+@media all and (max-width: 390px) {
+  .main-page {
+    text-align: center;
+
+    & .welcome-card {
+      max-width: 300px;
+      min-height: 180px;
+    }
+
+    & button {
+      width: 90px;
+      height: 40px;
+    }
+  }
+}
