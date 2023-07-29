@@ -11,9 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 // components
 import { AppComponent } from './app.component';
@@ -25,10 +26,13 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { GenreViewComponent } from './genre-view/genre-view.component';
 import { DirectorViewComponent } from './director-view/director-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserFavoriteMoviesComponent } from './user-favorite-movies/user-favorite-movies.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  { path: 'profile', component: UserProfileComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -43,6 +47,8 @@ const appRoutes: Routes = [
     GenreViewComponent,
     DirectorViewComponent,
     NavbarComponent,
+    UserProfileComponent,
+    UserFavoriteMoviesComponent,
   ],
 
   imports: [
@@ -59,6 +65,7 @@ const appRoutes: Routes = [
     MatIconModule,
     MatSnackBarModule,
     RouterModule.forRoot(appRoutes),
+    MatGridListModule,
   ],
 
   providers: [],

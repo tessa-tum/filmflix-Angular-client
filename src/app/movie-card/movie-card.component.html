@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+
 <app-navbar />
+
 <div class="movie-view">
+
   <mat-card *ngFor="let movie of movies" class="movie-card">
     <mat-card-header>
       <mat-card-title
@@ -31,7 +35,7 @@
           openDirector(
             movie.Director.Name,
             movie.Director.Bio,
-            movie.Director.Birth
+            movie.Director.Birthday
           )
         "
         color="basic"
@@ -59,3 +63,5 @@
     </mat-card-actions>
   </mat-card>
 </div>
+
+

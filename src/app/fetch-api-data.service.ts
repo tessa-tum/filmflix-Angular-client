@@ -58,6 +58,18 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
+  // get a JSON object of a single movie by _id
+  getMovieById(MovieID: string): Observable<any> {
+    return this.http
+      .get(apiUrl + 'movies/' + MovieID, {
+        headers: new HttpHeaders({
+          Authorization: 'Bearer ' + token,
+        }),
+      })
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
+  }
+
+
   // ... get one director endpoint
   getOneDirector(directorName: string): Observable<any> {
     return this.http
@@ -101,7 +113,9 @@ export class FetchApiDataService {
       })
       .pipe(
         map(this.extractResponseData),
-        map((data) => data.FavoriteMovies),
+        map((data) => {
+          console.log(data)
+          return data.FavoriteMovies}),
         catchError(this.handleError)
       );
   }

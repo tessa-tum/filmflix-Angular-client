@@ -18,7 +18,7 @@ export class MovieCardComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
-    public dialog: MatDialog
+    public dialog: MatDialog,
   ) {}
 
   // lifecycle hook: is called when Angular is done creating the component
@@ -42,23 +42,23 @@ export class MovieCardComponent implements OnInit {
   }
 
   // check if a movie is a user's favorite
-  isFavorite(_id: string): boolean {
-    return this.favorites.includes(_id);
+  isFavorite(MovieID: string): boolean {
+    return this.favorites.includes(MovieID);
   }
 
-  addToFavorites(_id: string): void {
-    this.fetchApiData.addFavoriteMovie(_id).subscribe((result) => {
+  addToFavorites(MovieID: string): void {
+    this.fetchApiData.addFavoriteMovie(MovieID).subscribe((result) => {
       this.snackBar.open('Movie added to favorites', 'OK', {
-        duration: 2000,
+        duration: 3000,
       });
       this.ngOnInit();
     });
   }
 
-  removeFromFavorites(_id: string): void {
-    this.fetchApiData.removeFavoriteMovie(_id).subscribe((result) => {
+  removeFromFavorites(MovieID: string): void {
+    this.fetchApiData.removeFavoriteMovie(MovieID).subscribe((result) => {
       this.snackBar.open('Movie removed from favorites', 'OK', {
-        duration: 2000,
+        duration: 3000,
       });
       this.ngOnInit();
     });
@@ -79,7 +79,7 @@ export class MovieCardComponent implements OnInit {
       data: {
         Name: name,
         Bio: bio,
-        Birth: birthday,
+        Birthday: birthday,
       },
       width: '400px',
     });

@@ -19,7 +19,8 @@ export class UserLoginFormComponent implements OnInit {
     private router: Router,
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
