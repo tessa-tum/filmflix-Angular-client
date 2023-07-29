@@ -49,7 +49,7 @@ export class MovieCardComponent implements OnInit {
   addToFavorites(MovieID: string): void {
     this.fetchApiData.addFavoriteMovie(MovieID).subscribe((result) => {
       this.snackBar.open('Movie added to favorites', 'OK', {
-        duration: 3000,
+        duration: 5000,
       });
       this.ngOnInit();
     });
@@ -58,7 +58,7 @@ export class MovieCardComponent implements OnInit {
   removeFromFavorites(MovieID: string): void {
     this.fetchApiData.removeFavoriteMovie(MovieID).subscribe((result) => {
       this.snackBar.open('Movie removed from favorites', 'OK', {
-        duration: 3000,
+        duration: 5000,
       });
       this.ngOnInit();
     });

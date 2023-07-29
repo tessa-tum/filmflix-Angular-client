@@ -36,17 +36,18 @@ export class UserFavoriteMoviesComponent {
     });
   }
 
-  // check if a movie is a user's favorite
-  isFavorite(_id: string): boolean {
-    return this.favorites.includes(_id);
-  }
-
   removeFromFavorites(_id: string): void {
     this.fetchApiData.removeFavoriteMovie(_id).subscribe((result) => {
       this.snackBar.open('Movie removed from favorites', 'OK', {
-        duration: 3000,
+        duration: 5000,
       });
-      window.location.reload();
+      const newFavs: any[] = []
+      this.favoriteMovies.filter(movie => {
+        if (movie._id !== _id) {
+          newFavs.push(movie)
+        }
+      })
+      this.favoriteMovies = newFavs
     });
   }
 

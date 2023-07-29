@@ -49,7 +49,7 @@ export class UserProfileComponent implements OnInit {
           'Credentials updated! Please login using your new credentials',
           'OK',
           {
-            duration: 3000,
+            duration: 5000,
           }
         );
       }
@@ -58,7 +58,7 @@ export class UserProfileComponent implements OnInit {
           'User information has been updated!',
           'OK',
           {
-            duration: 3000,
+            duration: 5000,
           }
         );
       }
@@ -72,7 +72,7 @@ export class UserProfileComponent implements OnInit {
           'User account has been deleted!',
           'OK',
           {
-            duration: 3000,
+            duration: 5000,
           }
         );
       });

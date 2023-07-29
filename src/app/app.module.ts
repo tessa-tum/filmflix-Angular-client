@@ -14,7 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 // components
 import { AppComponent } from './app.component';
@@ -64,8 +64,8 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatIconModule,
     MatSnackBarModule,
+    MatToolbarModule,
     RouterModule.forRoot(appRoutes),
-    MatGridListModule,
   ],
 
   providers: [],

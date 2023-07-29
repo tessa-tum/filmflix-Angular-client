@@ -1,66 +1,115 @@
 h2 {
-  color: #1a2b50;
+  color: #282828;
   font-size: 20px;
 }
 
 .movie-view {
-  position: relative;
-  display: grid;
-  max-width: 100vw;
-  margin: 3rem auto;
-  padding: 2rem auto 5rem;
-  row-gap: 1.65em;
-}
+  color: #282828;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+  width: 700px;
 
-.movie-card {
-  height: 65vh;
-  width: auto;
-  justify-self: center;
- 
-  justify-content: center;
-  padding: 15px;
-  color: #1A2B50;
-}
+  @media screen and (min-width: 640px) {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+  }
 
-.movie-card > img {
-  height: 70%;
-}
+  @media screen and (min-width: 1024px) {
+    max-width: 860px;
+  }
 
-.mdc-card__actions {
-  display: block;
-  margin-top: 10px;
-}
+  @media screen and (max-width: 500px) {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
 
-@media screen and (min-width: 250px) {
-  .movie-view {
-    grid-template-columns: 1fr;
+  @media screen and (min-width: 500px) and (max-width: 640px) {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+  }
+
+  & .movie-view-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 640px) {
+      width: 48%;
+      height: auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 32%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 300px;
+      height: auto;
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 640px) {
+      max-width: 400px;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    max-width: 600px;
+    height: auto;
+  }
+
+  @media screen and (min-width: 1680px) {
+    width: 50%;
+    height: auto;
+  }
+
+  & mat-card-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  & mat-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  & mat-card-subtitle {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  & mat-card-actions {
+    margin-top: 2rem;
+    display: block;
+    align-self: center;
+  }
+
+  & .btn-details,
+  & .btn-director,
+  & .btn-genre {
+    padding: 0;
+    width: 30%;
+    background-color: #84afdd;
+    color: #fffffe;
+    font-weight: 500;
+    margin-right: 7px;
+    font-size: 14px;
+  }
+
+  .btn-favorite {
+    background-color: #3d78b8;
+    color: #fffffe;
   }
 }
-
-@media screen and (min-width: 500px) {
-  .movie-view {
-    grid-template-columns: 1fr 1fr;
-  }
-  .movie-card {
-    width: 45vw;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .movie-view {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .movie-card {
-    width: 30vw;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .movie-view {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .movie-card {
-    width: 20vw;
-  }
-}
-

@@ -1,10 +1,95 @@
 
-.mat-mdc-card {
-  width: 350px;
-  background-color: #1A2B50;
-  border: none;
-  box-shadow: none;
-  margin-bottom: 40px;
-
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #84afdd;
 }
 
+.user-profile {
+  background-color:  #1A2B50;
+  border: none;
+  box-shadow: none;
+  color: #84afdd;
+  margin-bottom: 20px;
+  max-width: 860px;
+  display: flex;
+  margin: 0 auto;
+
+  & mat-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  & .user-profile-section {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid #84afdd;
+  }
+
+  & .user-profile-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    @media screen and (min-width: 640px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    & mat-form-field {
+      @media screen and (min-width: 640px) {
+        width: 48%;
+      }
+    }
+  }
+
+  & mat-card-actions {
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media screen and (min-width: 640px) {
+      flex-direction: row;
+    }
+  }
+
+  & .btn-update {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #84afdd;
+
+    @media screen and (min-width: 640px) {
+      width: auto;
+    }
+  }
+
+  & .btn-delete {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #f63b5a;
+
+    @media screen and (min-width: 640px) {
+      width: auto;
+    }
+  }
+
+
+
+
+
+
+  & button:not(:last-of-type) {
+    @media screen and (min-width: 640px) {
+      margin-right: 1rem;
+    }
+  }
+
+  & .btn-close {
+    background-color: #B388FF;
+    color: #fff;
+  }
+}

@@ -22,7 +22,6 @@ export class FetchApiDataService {
   // make api call for 
   // ... user registration endpoint
   public userRegistration(userDetails: any): Observable<any> {
-    // console.log(userDetails);
     return this.http
       .post(apiUrl + 'users', userDetails)
       .pipe(catchError(this.handleError));
@@ -30,7 +29,6 @@ export class FetchApiDataService {
 
   // ... user login endpoint
   public userLogin(userDetails: any): Observable<any> {
-    // console.log(userDetails);
     return this.http
       .post(apiUrl + 'login', userDetails)
       .pipe(catchError(this.handleError));
@@ -114,7 +112,6 @@ export class FetchApiDataService {
       .pipe(
         map(this.extractResponseData),
         map((data) => {
-          console.log(data)
           return data.FavoriteMovies}),
         catchError(this.handleError)
       );
@@ -191,7 +188,7 @@ export class FetchApiDataService {
       );
     }
     return throwError(
-      () => new Error('Something bad happened; please try again later.')
+      () => new Error('Something went wrong; please try again later.')
     );
   }
 }
