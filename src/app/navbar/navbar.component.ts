@@ -10,14 +10,23 @@ export class NavbarComponent implements OnInit {
   constructor(public router: Router) {}
   ngOnInit(): void {}
 
+  /**
+   * navigate to '/movies'
+   */
   toMovies(): void {
     this.router.navigate(['movies']);
   }
 
+  /**
+   * navigate to '/profile'
+   */
   toProfile(): void {
     this.router.navigate(['profile']);
   }
 
+  /**
+   * log out, clear localStorage, navigate to '/welcome'
+   */
   logout(): void {
     this.router.navigate(['welcome']);
     localStorage.clear();

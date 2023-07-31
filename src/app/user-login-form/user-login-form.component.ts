@@ -16,19 +16,21 @@ export class UserLoginFormComponent implements OnInit {
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
     public snackBar: MatSnackBar,
-    private router: Router,
+    private router: Router
   ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  /**
+   * Logs a user in with the data inputted by the user and displays success or error messages
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {
         localStorage.setItem('user', JSON.stringify(result.user));
         localStorage.setItem('token', result.token);
-        localStorage.setItem('Username', result.user.Username)
-        
+        localStorage.setItem('Username', result.user.Username);
+
         this.dialogRef.close();
 
         this.snackBar.open('Login successful', 'OK', {
