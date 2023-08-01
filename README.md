@@ -2,18 +2,20 @@
 
 ## Objective
 
-filmflix is an app for movie lovers who want to access information about movies and, once signed in, be able to view and update their profile information.
-The app has been built as the client-side to the [RESTful Movie API](https://github.com/tessa-tum/filmflix-api).
-<br>
+filmflix is an app for movie lovers who want to access information about movies and, once signed in, be able to view and update their profile information. The app has been built as the client-side to the [RESTful Movie API](https://github.com/tessa-tum/filmflix-api).
+
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
-Deployed app: https://tessa-tum.github.io/filmflix-Angular-client/welcome :sparkles:
+Deployed app can be found [here](https://tessa-tum.github.io/filmflix-Angular-client/welcome) :sparkles:
 
 ## Visuals
 
-Desktop view of home and profile page
+Desktop view of home page
 
 ![UI Screenshot 1](https://github.com/tessa-tum/filmflix-Angular-client/blob/main/src/assets/filmflix-angular-ui-1.PNG)
+
+Desktop view of profile page
+
 ![UI Screenshot 2](https://github.com/tessa-tum/filmflix-Angular-client/blob/main/src/assets/filmflix-angular-ui-2.PNG)
 
 ## Built with
